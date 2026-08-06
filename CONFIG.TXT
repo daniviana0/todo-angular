@@ -1,0 +1,38 @@
+-- Configuração do GitHub
+git config --global user.name daniviana0
+git config --global user.email danivianadecarvalho@gmail.com
+
+-- Preparação do Ambiente para desenvolvimento Angular
+-- Node, NPM, Angular
+node -v
+npm -v
+ng version
+
+-- Remove a políticas de segurança de execução de serviços do windows
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+-- Instalar o Angular global
+npm install -g @angular/cli
+
+-- Resolução de Problemas de Execução
+npm config get prefix
+-- Copiar o caminho que o comandou trouxe no Path das variáveis do sistema
+
+-- Crair um projeto angular
+ng new todo-angular  --routing=false --style=css --skip-tests --standalone --ssr=false --file-name-style-guide=2025 --defaults
+
+--  Na mensagem do google pressione N
+
+-- Para executar o projeto
+cd todo-angular
+ng serve --open
+
+-- Para restaurar o projeto clonado
+ cd todo-angular
+ npm i
+
+ -- Para criar compoinenentes e serviços (Não pode estar executando o projeto)
+ ng generate component components/todo-form --skip-tests
+ ng generate component components/todo-list --skip-tests
+ ng generate component components/todo-item --skip-tests
+ ng generate service services/todo-store --skip-tests
